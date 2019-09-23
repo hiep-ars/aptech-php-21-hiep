@@ -1,52 +1,60 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./bootstrap.css">
-        <link rel="stylesheet" href="./coverr.css">
+        <link rel="stylesheet" href="bootstrap.css">
+        <style>
+        body {
+            background-color: rgb(58, 57, 57);
+            height: 100vh;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+        h1 {
+            margin: auto;
+        }
+        .Header__Row__First-Six-Col__Un-Order-List__List-item--border-width {
+            border-block-width: 4px !important;
+        }
+        .Header__Row__First-Six-Col__Un-Order-List__List-item--un-active {
+            border-bottom-color: #343a40 !important;
+        }
+       .Header__Row__First-Six-Col__Un-Order-List__List-item--hover:hover {
+           border-bottom-width: 4px !important;
+           border-bottom-color: gray !important;
+           border-bottom-style: solid;
+       }
+        </style>
     </head>
-    <body class="bg-dark vh-100">
-        <div class="container header h-25">
-            <div class="row header__first-row">
-                <div class="col-6 d-flex flex-row justify-content-center align-items-start Header__First-Row__first-Column">
-                    <h1 class="text-white">Cover</h1>
+    <body>
+
+        <div class="container w-75 d-flex  flex-column p-3 Header" style="height: 10%; ">
+            <div class="row Header__Row">
+                <div class="col-6 d-flex justify-content-start Header__Row__First-Six-Col">
+                    <h2>Cover</h2>
                 </div>
-                <div class="col-6 Header__First-Row__Second-Column">
-                    <ul class="d-flex list-unstyled mt-2 Header__First-Row__Second-Column__Ul--list-unstyled">
-                        <li class="h5 mx-4">
-                        <a class="text-white border-bottom Header__First-Row__Second-Column__Ul__Li__Anchor
-                        Header__First-Row__Second-Column__Ul__Li__Anchor--active"
-                        href="">Home</a>
-                        </li>
-                        <li class="h5 mx-4">
-                            <a class="text-white
-                            Header__First-Row__Second-Column__Ul__Li__Anchor"
-                            href="">Features</a>
-                        </li>
-                        <li class="h5 mx-4">
-                            <a class="text-white Header__First-Row__Second-Column__Ul__Li__Anchor"
-                            href="">Contact</a>
-                        </li>
-                    </ul>
+                <div class="col-6 Header__Row__First-Six-Col">
+                   <ul class="d-flex justify-content-end p-3  Header__Row__First-Six-Col__Un-Order-List__List-item " style="list-style: none;">
+                       <li class="text-light mx-2  Header__Row__First-Six-Col__Un-Order-List__List-item--border-width Header__Row__First-Six-Col__Un-Order-List__List-item--hover 
+                       ">Home</li>
+                       <li class="text-light mx-2 Header__Row__First-Six-Col__Un-Order-List__List-item--un-active Header__Row__First-Six-Col__Un-Order-List__List-item--hover ">Features</li>
+                       <li class="text-light mx-2 Header__Row__First-Six-Col__Un-Order-List__List-item--un-activeHeader__Row__First-Six-Col__Un-Order-List__List-item--hover ">Contact</li>
+                   </ul>
                 </div>
             </div>
         </div>
-        <div class="container content h-50">
-            <div class="row h-100">
-            <div class="col-12 d-flex flex-column align-items-center justify-content-center ">
-                <h1 class="text-white">Cover your page.</h1>
-                <p class="text-white text-center">Cover is a one-page template for building simple and beautiful Home
-                        pages . Download, edit the text, and add your own fullscreen 
-                        your own fullscreen background photo to make it your own.</p>
-                        <button class="btn btn-light">Learn More</button>
-            </div>
-            </div>
-        </div>
-        <div class="container footer h-25">
-            <div class="row h-100 mb-2">
-                <div class="col-12 d-flex flex-row justify-content-center align-items-end">
-                    <p class="text-muted">Cover tenplate for<a class="text-white" href="https://getbootstrap.com/"> Bootstrap</a>, by<a class="text-white" href="https://getbootstrap.com/"> @mdo</a></p>
+        
+        <div class="container w-75 d-flex justify-content-center  align-items-center p-5 "  style="height: 80%">
+                <div class="row" >
+                    <h1>Cover your page.</h1>
+                    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+                    <a href="#" class="btn btn-light" role="button" style="margin: auto;">Learn more</a>
                 </div>
             </div>
-        </div>
+        <div class="container w-75 d-flex justify-content-center p-3 " style="height: 10%; ">
+        <p><span>Cover template for</span> Bootstrap, by @mdo.</p>
+    
+    </div>
+    
     </body>
 </html>
