@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+  </head>
+  <body>
+      <h1 id="haha">Hello</h1>
+      <button onclick="DoiMau()">Doi Mau</button>
+
+      <br><br><br>
+      <img id="bongden" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="..." style="height: 300px;">
+
+      <button onclick="LightOn()" >Light On</button>
+      <button onclick="LightOff()" >Light Off</button>
+
+      <script>
+          function DoiMau(){
+            document.getElementById('haha').style.color ='red';
+          }
+          function LightOn(){
+            document.getElementById('bongden').src ='https://www.w3schools.com/js/pic_bulbon.gif'
+            
+          }
+          function LightOff(){
+            document.getElementById('bongden').src ='https://www.w3schools.com/js/pic_bulboff.gif'
+            
+          }
+      </script>
+  </body>
+</html>
