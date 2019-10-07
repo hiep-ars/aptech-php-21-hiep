@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button onclick="loadDoc();">click me</button>
+    <table id="table_id" class="display">
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+        </thead>
+        <tbody id="nam">
+
+        </tbody>
+    </table>
+    <script>
+        function loadDoc() {
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    var duLieuTraVe = http.responseText
+                    http.responseText;
+                    console.log(duLieuTraVe);
+                    var kieuDuLieuTraVe = typeof (duLieuTraVe);
+                    console.log(kieuDuLieuTraVe);
+                    var chuyenJSONThanhObject = JSON.parse(duLieuTraVe);
+                    console.log(chuyenJSONThanhObject);
+                    var kieuCuachuyenJSONThanhObject = typeof (chuyenJSONThanhObject);
+                    var tableBody = document.getElementById('nam');
+                    for (var i = 0; i < chuyenJSONThanhObject.users.length; i++) {
+                        var tableRow = document.createElement('tr');
+                        tableBody.appendChild(tableRow);
+                        var tableDataId = document.createElement('td');
+                        tableDataId.innerHTML = chuyenJSONThanhObject.users[i].id;
+                        tableRow.appendChild(tableDataId);
+
+                        var tableDataName = document.createElement('td');
+                        tableDataName.innerHTML = chuyenJSONThanhObject.users[i].name;
+                        tableRow.appendChild(tableDataName);
+
+                        var tableDataEmail = document.createElement('td');
+                        tableDataEmail.innerHTML = chuyenJSONThanhObject.users[i].email;
+                        tableRow.appendChild(tableDataEmail);
+
+                        var tableDataPassword = document.createElement('td');
+                        tableDataPassword.innerHTML = chuyenJSONThanhObject.users[i].password;
+                        tableRow.appendChild(tableDataPassword);
+                    }
+                }
+            };
+            http.open("GET", "https://namcoi.com/aptech-demo/user-crud-laravel/public/api/users", true);
+            http.send();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <button onclick="loadDuLieu();">click me</button>
+    <script>
+        function loadDuLieu() {
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    document.getElementById('demo').innerHTML = this.responseText;
+                }
+            };
+            http.open("GET", 'hiep.txt', true);
+            http.send();
+        }
+    </script>
+</body>
+
+</html>

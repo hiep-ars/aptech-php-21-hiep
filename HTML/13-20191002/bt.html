@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
+    </script>
+
+
+</head>
+
+<body>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+
+            </tr>
+        </thead>
+    </table>
+    <script>
+        var data = [{
+            "id": 10,
+            "name": "Doug Kuhn",
+            "email": "anthony39@example.org",
+            "password": "$2y$10$28aCKmA\/h3f7StrQMOBrRuKPIC3lsY2pSDuJkz0BhS2VfqA6e2hBC"
+        }, {
+            "id": 9,
+            "name": "Edythe Okuneva",
+            "email": "haley.gillian@example.com",
+            "password": "$2y$10$BcmjS26GggQI1Sd12enRkuO2DUCOBUJT5CtG3Twm3S2sYtNfo\/i6C"
+        }, {
+            "id": 8,
+            "name": "Ms. Victoria Bogisich IV",
+            "email": "lbahringer@example.net",
+            "password": "$2y$10$5WxdHoWdXPLfGdTyoZCLc.hXKAN802748CFoZmC1TtZyA5RD3qqV6"
+        }, {
+            "id": 7,
+            "name": "Arnold Eichmann",
+            "email": "neha.nader@example.com",
+            "password": "$2y$10$fGEOJ1hC2Rjpjn56cPy6ke2hshYKosUxQw5PJLabfJ\/5mglLuvyHC"
+        }, {
+            "id": 6,
+            "name": "Gregoria Larkin",
+            "email": "laurine.hahn@example.com",
+            "password": "$2y$10$UmF3qNUAQFpTC8w0pGJr3OWUaTTt0UakTlLYT1B9KAgg94NxOI73."
+        }, {
+            "id": 5,
+            "name": "Prof. Mervin Gottlieb Jr.",
+            "email": "jhickle@example.com",
+            "password": "$2y$10$dJCVf1NM78rZdyx35hBn0eZxLfy9KgPGLfrr2zARKuA3R0CDUh9X6"
+        }, {
+            "id": 4,
+            "name": "Dr. Patrick Huel PhD",
+            "email": "cpadberg@example.com",
+            "password": "$2y$10$Oy2qQyN4lZ3VKwGD.Mdcuu081Dp80mQP\/ETaCrvsFe\/wj2C1yN96i"
+        }, {
+            "id": 3,
+            "name": "Mrs. Justine Tremblay IV",
+            "email": "natasha.kovacek@example.com",
+            "password": "$2y$10$r15A6IK4dUQW73HlOUm44u50nXT9nFf62GS8vJWW3UpYmtP60RUtG"
+        }, {
+            "id": 2,
+            "name": "Rhett Ratke",
+            "email": "welch.javonte@example.com",
+            "password": "$2y$10$k9mq.mdETrQgnYxnZULXEOinIdr1jpK1yxTJ2MWW6B.hfl4COGpFm"
+        }, {
+            "id": 1,
+            "name": "Doug Kuhn",
+            "email": "anthony39@example.org",
+            "password": "$2y$10$28aCKmA\/h3f7StrQMOBrRuKPIC3lsY2pSDuJkz0BhS2VfqA6e2hBC"
+        }, {
+            "id": 11,
+            "name": "Edythe Okuneva",
+            "email": "haley.gillian@example.com",
+            "password": "$2y$10$BcmjS26GggQI1Sd12enRkuO2DUCOBUJT5CtG3Twm3S2sYtNfo\/i6C"
+        }, {
+            "id": 12,
+            "name": "Ms. Victoria Bogisich IV",
+            "email": "lbahringer@example.net",
+            "password": "$2y$10$5WxdHoWdXPLfGdTyoZCLc.hXKAN802748CFoZmC1TtZyA5RD3qqV6"
+        }, {
+            "id": 13,
+            "name": "Arnold Eichmann",
+            "email": "neha.nader@example.com",
+            "password": "$2y$10$fGEOJ1hC2Rjpjn56cPy6ke2hshYKosUxQw5PJLabfJ\/5mglLuvyHC"
+        }, {
+            "id": 14,
+            "name": "Gregoria Larkin",
+            "email": "laurine.hahn@example.com",
+            "password": "$2y$10$UmF3qNUAQFpTC8w0pGJr3OWUaTTt0UakTlLYT1B9KAgg94NxOI73."
+        }, {
+            "id": 15,
+            "name": "Prof. Mervin Gottlieb Jr.",
+            "email": "jhickle@example.com",
+            "password": "$2y$10$dJCVf1NM78rZdyx35hBn0eZxLfy9KgPGLfrr2zARKuA3R0CDUh9X6"
+        }, {
+            "id": 16,
+            "name": "Dr. Patrick Huel PhD",
+            "email": "cpadberg@example.com",
+            "password": "$2y$10$Oy2qQyN4lZ3VKwGD.Mdcuu081Dp80mQP\/ETaCrvsFe\/wj2C1yN96i"
+        }, {
+            "id": 17,
+            "name": "Mrs. Justine Tremblay IV",
+            "email": "natasha.kovacek@example.com",
+            "password": "$2y$10$r15A6IK4dUQW73HlOUm44u50nXT9nFf62GS8vJWW3UpYmtP60RUtG"
+        }, {
+            "id": 18,
+            "name": "Rhett Ratke",
+            "email": "welch.javonte@example.com",
+            "password": "$2y$10$k9mq.mdETrQgnYxnZULXEOinIdr1jpK1yxTJ2MWW6B.hfl4COGpFm"
+        }, {
+            "id": 19,
+            "name": "Doug Kuhn",
+            "email": "anthony39@example.org",
+            "password": "$2y$10$28aCKmA\/h3f7StrQMOBrRuKPIC3lsY2pSDuJkz0BhS2VfqA6e2hBC"
+        }, {
+            "id": 20,
+            "name": "Edythe Okuneva",
+            "email": "haley.gillian@example.com",
+            "password": "$2y$10$BcmjS26GggQI1Sd12enRkuO2DUCOBUJT5CtG3Twm3S2sYtNfo\/i6C"
+        }, {
+            "id": 21,
+            "name": "Ms. Victoria Bogisich IV",
+            "email": "lbahringer@example.net",
+            "password": "$2y$10$5WxdHoWdXPLfGdTyoZCLc.hXKAN802748CFoZmC1TtZyA5RD3qqV6"
+        }, {
+            "id": 22,
+            "name": "Arnold Eichmann",
+            "email": "neha.nader@example.com",
+            "password": "$2y$10$fGEOJ1hC2Rjpjn56cPy6ke2hshYKosUxQw5PJLabfJ\/5mglLuvyHC"
+        }, {
+            "id": 23,
+            "name": "Gregoria Larkin",
+            "email": "laurine.hahn@example.com",
+            "password": "$2y$10$UmF3qNUAQFpTC8w0pGJr3OWUaTTt0UakTlLYT1B9KAgg94NxOI73."
+        }, {
+            "id": 24,
+            "name": "Prof. Mervin Gottlieb Jr.",
+            "email": "jhickle@example.com",
+            "password": "$2y$10$dJCVf1NM78rZdyx35hBn0eZxLfy9KgPGLfrr2zARKuA3R0CDUh9X6"
+        }, {
+            "id": 25,
+            "name": "Dr. Patrick Huel PhD",
+            "email": "cpadberg@example.com",
+            "password": "$2y$10$Oy2qQyN4lZ3VKwGD.Mdcuu081Dp80mQP\/ETaCrvsFe\/wj2C1yN96i"
+        }, {
+            "id": 26,
+            "name": "Mrs. Justine Tremblay IV",
+            "email": "natasha.kovacek@example.com",
+            "password": "$2y$10$r15A6IK4dUQW73HlOUm44u50nXT9nFf62GS8vJWW3UpYmtP60RUtG"
+        }, {
+            "id": 27,
+            "name": "Rhett Ratke",
+            "email": "welch.javonte@example.com",
+            "password": "$2y$10$k9mq.mdETrQgnYxnZULXEOinIdr1jpK1yxTJ2MWW6B.hfl4COGpFm"
+        }, {
+            "id": 28,
+            "name": "Doug Kuhn",
+            "email": "anthony39@example.org",
+            "password": "$2y$10$28aCKmA\/h3f7StrQMOBrRuKPIC3lsY2pSDuJkz0BhS2VfqA6e2hBC"
+        }, {
+            "id": 29,
+            "name": "Edythe Okuneva",
+            "email": "haley.gillian@example.com",
+            "password": "$2y$10$BcmjS26GggQI1Sd12enRkuO2DUCOBUJT5CtG3Twm3S2sYtNfo\/i6C"
+        }, {
+            "id": 30,
+            "name": "Ms. Victoria Bogisich IV",
+            "email": "lbahringer@example.net",
+            "password": "$2y$10$5WxdHoWdXPLfGdTyoZCLc.hXKAN802748CFoZmC1TtZyA5RD3qqV6"
+        }, {
+            "id": 31,
+            "name": "Arnold Eichmann",
+            "email": "neha.nader@example.com",
+            "password": "$2y$10$fGEOJ1hC2Rjpjn56cPy6ke2hshYKosUxQw5PJLabfJ\/5mglLuvyHC"
+        }, {
+            "id": 32,
+            "name": "Gregoria Larkin",
+            "email": "laurine.hahn@example.com",
+            "password": "$2y$10$UmF3qNUAQFpTC8w0pGJr3OWUaTTt0UakTlLYT1B9KAgg94NxOI73."
+        }, {
+            "id": 33,
+            "name": "Prof. Mervin Gottlieb Jr.",
+            "email": "jhickle@example.com",
+            "password": "$2y$10$dJCVf1NM78rZdyx35hBn0eZxLfy9KgPGLfrr2zARKuA3R0CDUh9X6"
+        }, {
+            "id": 34,
+            "name": "Dr. Patrick Huel PhD",
+            "email": "cpadberg@example.com",
+            "password": "$2y$10$Oy2qQyN4lZ3VKwGD.Mdcuu081Dp80mQP\/ETaCrvsFe\/wj2C1yN96i"
+        }, {
+            "id": 35,
+            "name": "Mrs. Justine Tremblay IV",
+            "email": "natasha.kovacek@example.com",
+            "password": "$2y$10$r15A6IK4dUQW73HlOUm44u50nXT9nFf62GS8vJWW3UpYmtP60RUtG"
+        }
+        ];
+
+        $('#table_id').DataTable({
+            data: data,
+            columns: [{
+                    data: 'id'
+                },
+                {
+                    data: 'name'
+                },
+                {
+                    data: 'email'
+                },
+                {
+                    data: 'password'
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>

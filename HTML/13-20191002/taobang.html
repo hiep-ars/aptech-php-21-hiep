@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+    th {
+        border: 3px solid white;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>tao bang</title>
+</head>
+
+<body>
+        <table>
+          <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+          </thead>
+          <tbody id="table-body">
+      
+          </tbody>
+        </table>
+      
+        <button onclick="inDuLieu();">Click de in du lieu ra bang</button>
+        <script>
+          function inDuLieu() {
+            var duLieuBang = [
+              [1, 'a', 'b', 'c'],
+              [2, 'd', 'e', 'f'],
+              [3, 'g', 'h', 'j']
+            ];
+            for (var i = 0; i < 3; i++) {
+              var tableRow = document.createElement('tr');
+              tableRow.setAttribute('id', 'tr-' + i);
+              var tableBody = document.getElementById('table-body');
+              tableBody.appendChild(tableRow);
+              for (var j = 0; j < 4; j++) {
+                var data = document.createElement('td');
+                data.innerHTML = duLieuBang[i][j];
+                tableRow.appendChild(data);
+              }
+            }
+          }
+        </script>
+      </body>
+
+</html>
